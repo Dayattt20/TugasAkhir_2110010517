@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 192
-  Top = 152
+  Left = 224
+  Top = 145
   Width = 933
   Height = 548
   Caption = 'Form2'
@@ -11,6 +11,7 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -61,21 +62,21 @@ object Form2: TForm2
       Caption = 'PENDIDIKAN'
     end
     object lbl6: TLabel
-      Left = 352
+      Left = 368
       Top = 32
       Width = 32
       Height = 13
       Caption = 'MAPEL'
     end
     object lbl7: TLabel
-      Left = 352
+      Left = 368
       Top = 64
-      Width = 76
+      Width = 30
       Height = 13
-      Caption = 'TINGKAT KELAS'
+      Caption = 'KELAS'
     end
     object lbl8: TLabel
-      Left = 352
+      Left = 368
       Top = 96
       Width = 45
       Height = 13
@@ -144,6 +145,7 @@ object Form2: TForm2
       Height = 33
       Caption = 'BARU'
       TabOrder = 7
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 144
@@ -152,6 +154,7 @@ object Form2: TForm2
       Height = 33
       Caption = 'SIMPAN'
       TabOrder = 8
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 240
@@ -191,6 +194,7 @@ object Form2: TForm2
     Top = 320
     Width = 697
     Height = 153
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -202,16 +206,27 @@ object Form2: TForm2
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Dayat UNISKA\SEMESTER 4\TugasAkhir\libmysql.dll'
     Left = 808
     Top = 80
   end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_wali_kelas')
     Params = <>
     Left = 808
     Top = 136
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 808
     Top = 192
   end

@@ -16,15 +16,11 @@ type
     lbl4: TLabel;
     lbl5: TLabel;
     lbl6: TLabel;
-    lbl7: TLabel;
-    lbl8: TLabel;
     edt1: TEdit;
     edt2: TEdit;
     edt3: TEdit;
     edt4: TEdit;
     edt5: TEdit;
-    edt6: TEdit;
-    edt7: TEdit;
     btn1: TButton;
     btn2: TButton;
     btn3: TButton;
@@ -35,8 +31,9 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
-    lbl9: TLabel;
-    edt8: TEdit;
+    edt6: TEdit;
+    lbl7: TLabel;
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,5 +46,20 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm4.btn1Click(Sender: TObject);
+begin
+  btn1.Enabled := False;
+  btn2.Enabled := True;
+  btn3.Enabled := False;
+  btn4.Enabled := False;
+  btn5.Enabled := True;
+  edt1.Enabled := True;
+  edt2.Enabled := True;
+  edt3.Enabled := True;
+  edt4.Enabled := True;
+  edt5.Enabled := True;
+  edt6.Enabled := True;
+end;
 
 end.

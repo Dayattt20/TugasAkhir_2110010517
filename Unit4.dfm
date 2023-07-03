@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 266
-  Top = 170
+  Left = 183
+  Top = 130
   Width = 930
   Height = 535
   Caption = 'Form4'
@@ -74,20 +74,6 @@ object Form4: TForm4
       Height = 13
       Caption = 'ALAMAT'
     end
-    object lbl8: TLabel
-      Left = 352
-      Top = 96
-      Width = 57
-      Height = 13
-      Caption = 'PEKERJAAN'
-    end
-    object lbl9: TLabel
-      Left = 352
-      Top = 128
-      Width = 38
-      Height = 13
-      Caption = 'STATUS'
-    end
     object edt1: TEdit
       Left = 136
       Top = 32
@@ -128,29 +114,14 @@ object Form4: TForm4
       TabOrder = 4
       Text = 'edt1'
     end
-    object edt6: TEdit
-      Left = 448
-      Top = 64
-      Width = 153
-      Height = 21
-      TabOrder = 5
-      Text = 'edt1'
-    end
-    object edt7: TEdit
-      Left = 448
-      Top = 96
-      Width = 153
-      Height = 21
-      TabOrder = 6
-      Text = 'edt1'
-    end
     object btn1: TButton
       Left = 48
       Top = 184
       Width = 81
       Height = 33
       Caption = 'BARU'
-      TabOrder = 7
+      TabOrder = 5
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 144
@@ -158,7 +129,7 @@ object Form4: TForm4
       Width = 81
       Height = 33
       Caption = 'SIMPAN'
-      TabOrder = 8
+      TabOrder = 6
     end
     object btn3: TButton
       Left = 240
@@ -166,7 +137,7 @@ object Form4: TForm4
       Width = 81
       Height = 33
       Caption = 'UBAH'
-      TabOrder = 9
+      TabOrder = 7
     end
     object btn4: TButton
       Left = 336
@@ -174,7 +145,7 @@ object Form4: TForm4
       Width = 81
       Height = 33
       Caption = 'HAPUS'
-      TabOrder = 10
+      TabOrder = 8
     end
     object btn5: TButton
       Left = 432
@@ -182,7 +153,7 @@ object Form4: TForm4
       Width = 81
       Height = 33
       Caption = 'BATAL'
-      TabOrder = 11
+      TabOrder = 9
     end
     object btn6: TButton
       Left = 528
@@ -190,14 +161,14 @@ object Form4: TForm4
       Width = 81
       Height = 33
       Caption = 'LAPORAN'
-      TabOrder = 12
+      TabOrder = 10
     end
-    object edt8: TEdit
+    object edt6: TEdit
       Left = 448
-      Top = 128
+      Top = 64
       Width = 153
       Height = 21
-      TabOrder = 13
+      TabOrder = 11
       Text = 'edt1'
     end
   end
@@ -206,6 +177,7 @@ object Form4: TForm4
     Top = 320
     Width = 697
     Height = 153
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -217,7 +189,11 @@ object Form4: TForm4
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    LibraryLocation = 'C:\Dayat UNISKA\SEMESTER 4\TugasAkhir\libmysql.dll'
     Left = 808
     Top = 80
   end

@@ -27,6 +27,7 @@ type
     zqry1: TZQuery;
     ds1: TDataSource;
     dbgrd1: TDBGrid;
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,5 +40,17 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm3.btn1Click(Sender: TObject);
+begin
+  btn1.Enabled := False;
+  btn2.Enabled := True;
+  btn3.Enabled := True;
+  btn4.Enabled := True;
+  btn5.Enabled := True;
+  edt1.Enabled := True;
+  edt2.Enabled := True;
+  edt3.Enabled := True;
+end;
 
 end.

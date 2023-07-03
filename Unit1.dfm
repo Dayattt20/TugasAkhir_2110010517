@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 262
-  Top = 97
+  Left = 245
+  Top = 131
   Width = 935
   Height = 588
   Caption = 'Form1'
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl14: TLabel
@@ -28,7 +29,7 @@ object Form1: TForm1
   end
   object pnl1: TPanel
     Left = 24
-    Top = 24
+    Top = 16
     Width = 761
     Height = 329
     TabOrder = 0
@@ -244,6 +245,7 @@ object Form1: TForm1
       Height = 33
       Caption = 'SIMPAN'
       TabOrder = 14
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 248
@@ -283,6 +285,7 @@ object Form1: TForm1
     Top = 360
     Width = 761
     Height = 161
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -291,6 +294,7 @@ object Form1: TForm1
     TitleFont.Style = []
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 856
     Top = 160
   end
@@ -298,11 +302,21 @@ object Form1: TForm1
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Dayat UNISKA\SEMESTER 4\TugasAkhir\libmysql.dll'
     Left = 856
     Top = 64
   end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_siswa')
     Params = <>
     Left = 856
     Top = 112

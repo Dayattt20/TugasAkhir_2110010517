@@ -164,21 +164,12 @@ object Form1: TForm1
       TabOrder = 4
       Text = 'edt1'
     end
-    object dtp1: TDateTimePicker
-      Left = 120
-      Top = 224
-      Width = 186
-      Height = 25
-      Date = 45098.687577280090000000
-      Time = 45098.687577280090000000
-      TabOrder = 5
-    end
     object edt6: TEdit
       Left = 480
       Top = 16
       Width = 185
       Height = 21
-      TabOrder = 6
+      TabOrder = 5
       Text = 'edt1'
     end
     object edt7: TEdit
@@ -186,7 +177,7 @@ object Form1: TForm1
       Top = 56
       Width = 185
       Height = 21
-      TabOrder = 7
+      TabOrder = 6
       Text = 'edt1'
     end
     object edt8: TEdit
@@ -194,7 +185,7 @@ object Form1: TForm1
       Top = 96
       Width = 185
       Height = 21
-      TabOrder = 8
+      TabOrder = 7
       Text = 'edt1'
     end
     object edt9: TEdit
@@ -202,7 +193,7 @@ object Form1: TForm1
       Top = 136
       Width = 185
       Height = 21
-      TabOrder = 9
+      TabOrder = 8
       Text = 'edt1'
     end
     object edt10: TEdit
@@ -210,7 +201,7 @@ object Form1: TForm1
       Top = 176
       Width = 185
       Height = 21
-      TabOrder = 10
+      TabOrder = 9
       Text = 'edt1'
     end
     object edt11: TEdit
@@ -218,7 +209,7 @@ object Form1: TForm1
       Top = 216
       Width = 185
       Height = 21
-      TabOrder = 11
+      TabOrder = 10
       Text = 'edt1'
     end
     object edt12: TEdit
@@ -226,7 +217,7 @@ object Form1: TForm1
       Top = 256
       Width = 185
       Height = 21
-      TabOrder = 12
+      TabOrder = 11
       Text = 'edt1'
     end
     object btn1: TButton
@@ -235,7 +226,7 @@ object Form1: TForm1
       Width = 97
       Height = 33
       Caption = 'BARU'
-      TabOrder = 13
+      TabOrder = 12
       OnClick = btn1Click
     end
     object btn2: TButton
@@ -244,7 +235,7 @@ object Form1: TForm1
       Width = 97
       Height = 33
       Caption = 'SIMPAN'
-      TabOrder = 14
+      TabOrder = 13
       OnClick = btn2Click
     end
     object btn3: TButton
@@ -253,7 +244,8 @@ object Form1: TForm1
       Width = 97
       Height = 33
       Caption = 'UBAH'
-      TabOrder = 15
+      TabOrder = 14
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 352
@@ -261,7 +253,8 @@ object Form1: TForm1
       Width = 97
       Height = 33
       Caption = 'HAPUS'
-      TabOrder = 16
+      TabOrder = 15
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 456
@@ -269,7 +262,8 @@ object Form1: TForm1
       Width = 105
       Height = 33
       Caption = 'BATAL'
-      TabOrder = 17
+      TabOrder = 16
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 568
@@ -277,6 +271,15 @@ object Form1: TForm1
       Width = 105
       Height = 33
       Caption = 'LAPORAN'
+      TabOrder = 17
+    end
+    object dtp1: TDateTimePicker
+      Left = 120
+      Top = 224
+      Width = 186
+      Height = 21
+      Date = 45110.652881516200000000
+      Time = 45110.652881516200000000
       TabOrder = 18
     end
   end
@@ -292,6 +295,7 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds1: TDataSource
     DataSet = zqry1

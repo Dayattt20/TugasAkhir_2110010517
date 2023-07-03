@@ -163,6 +163,7 @@ object Form2: TForm2
       Height = 33
       Caption = 'UBAH'
       TabOrder = 9
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 336
@@ -171,6 +172,7 @@ object Form2: TForm2
       Height = 33
       Caption = 'HAPUS'
       TabOrder = 10
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 432
@@ -179,6 +181,7 @@ object Form2: TForm2
       Height = 33
       Caption = 'BATAL'
       TabOrder = 11
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 528
@@ -201,6 +204,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

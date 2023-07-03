@@ -38,6 +38,8 @@ type
     procedure bersih;
     procedure btn2Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -154,6 +156,46 @@ edt6.Text := zqry1.FieldList[6].AsString;
   edt4.Enabled := True;
   edt5.Enabled := True;
   edt6.Enabled := True;
+end;
+
+procedure TForm4.btn3Click(Sender: TObject);
+begin
+if (edt1.Text= '')or(edt2.Text= '')or(edt3.Text= '')or(edt4.Text= '')or(edt5.Text= '')or(edt6.Text= '') then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+
+
+begin
+  ShowMessage('Data Berhasil Di Update');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update data_orangtua_wali set nik="'+edt1.Text+'",nama="'+edt2.Text+'",jenis_kelamin="'+edt3.Text+'",pendidikan="'+edt4.Text+'",no_telpon="'+edt5.Text+'",alamat="'+edt6.Text+'" where id ="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select*from data_orangtua_wali');
+  zqry1.Open;
+  posisiawal;
+end;
+end;
+
+procedure TForm4.btn4Click(Sender: TObject);
+begin
+if MessageDlg('Apakah Anda Yakin Menghapus Data Ini?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from data_orangtua_wali where id ="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from data_orangtua_wali');
+  zqry1.Open;
+  ShowMessage('Data Berhasil Dihapus');
+  posisiawal;
+end else
+begin
+  ShowMessage('Data Batal Dihapus');
+  posisiawal;
+end;
 end;
 
 end.
